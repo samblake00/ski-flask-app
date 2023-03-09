@@ -6,8 +6,8 @@ RESTful API GeoAPI resources
 """
 
 from flask import request, jsonify
-from flask_restplus import Namespace, Resource, abort
-from flask_restplus import fields
+from flask_restx import Namespace, Resource, abort
+from flask_restx import fields
 from http import HTTPStatus
 from shapely.geometry import Polygon, shape
 from app.modules.geoapi import GeoApiNamespace

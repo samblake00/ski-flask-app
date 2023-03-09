@@ -3,7 +3,7 @@
 Example RESTful API Server.
 """
 from flask import Flask
-from flask_restplus import Api
+from flask_restx import Api
 
 api_v1 = Api(
     version='1.0',
