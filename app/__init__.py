@@ -9,10 +9,9 @@ import logging
 
 api_v1 = Api(
     version='1.0',
-    title="FLASK | FLASK-RESTPlus GeoAPI",
+    title="FLASK | Ski Conditions API",
     description=(
-        "This is a FLASK-RESPlus powered API with geospatial super power.\n\n"
-        "Checkout more at https://gis-ops.com or https://github.com/gis-ops\n"
+        "This is a FLASK REST API with the ability to shred some gnar.\n\n"
     ),
 )
 
