@@ -6,10 +6,11 @@ from flask_restx import fields, Namespace
 from flask import request
 from flask_restx import Resource
 from app.models import Resort, Condition
+from app.modules.ski import SkiNamespace
 
 # Define namespace here so we avoid circular imports and ensure RESTX symbols are
 # available where resources are declared.
-ski_ns = Namespace('ski', description='Ski resorts and conditions')
+ski_ns = Namespace('ski', description=SkiNamespace.description)
 
 # RESTX models
 resort_model = ski_ns.model('Resort', {
