@@ -13,9 +13,6 @@ api_v1 = Api(
     description=(
         "This is a FLASK REST API with the ability to shred some gnar."
     ),
-    # Serve Swagger UI under the blueprint at /api/v1/swaggerui so the
-    # blueprint root /api/v1/ can be used for a JSON index.
-    doc='/swaggerui',
 )
 
 def create_app(flask_config_name=None, **kwargs):
