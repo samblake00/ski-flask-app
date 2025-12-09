@@ -42,9 +42,9 @@ env/
 Thumbs.db
 
 # Local DB / runtime files
-dev.db
+#dev.db
 *.sqlite3
-*.db
+#*.db
 
 # Logs
 *.log

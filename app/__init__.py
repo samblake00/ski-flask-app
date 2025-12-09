@@ -13,6 +13,9 @@ api_v1 = Api(
     description=(
         "This is a FLASK REST API with the ability to shred some gnar."
     ),
+    # Serve Swagger UI under the blueprint at /api/v1/swaggerui so the
+    # blueprint root /api/v1/ can be used for a JSON index.
+    doc='/swaggerui',
 )
 
 def create_app(flask_config_name=None, **kwargs):
@@ -26,11 +29,11 @@ def create_app(flask_config_name=None, **kwargs):
     # Load the config file
     app.config.from_object('config.DevelopmentConfig')
 
-    # Initialize FLASK-RESTPlus
-    api_v1.init_app(app)
-
     # Initialize extensions
     db.init_app(app)
+
+    # Initialize FLASK-RESTPlus
+    api_v1.init_app(app)
 
     # Start scheduler (if enabled) — import here to avoid circular imports
     if app.config.get('SCHEDULER_ENABLED'):

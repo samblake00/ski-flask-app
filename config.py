@@ -11,7 +11,7 @@ class BaseConfig(object):
 
 class DevelopmentConfig(BaseConfig):
     """config for DevelopmentConfig."""
-    DEBUG = False
+    DEBUG = True
     DEVELOPMENT = True
 
     # Database (prototype uses sqlite file)
@@ -19,12 +19,8 @@ class DevelopmentConfig(BaseConfig):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # Scheduler
-    SCHEDULER_ENABLED = True
+    SCHEDULER_ENABLED = False
     SCHEDULER_POLL_INTERVAL_MINUTES = 5
 
     # Providers
     ENABLE_REAL_PROVIDERS = False
-
-    # Cache (prototype)
-    CACHE_TYPE = 'SimpleCache'
-    CACHE_DEFAULT_TIMEOUT = 300
