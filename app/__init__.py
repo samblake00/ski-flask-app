@@ -11,7 +11,7 @@ api_v1 = Api(
     version='1.0',
     title="FLASK | Ski Conditions API",
     description=(
-        "This is a FLASK REST API with the ability to shred some gnar.\n\n"
+        "This is a FLASK REST API with the ability to shred some gnar."
     ),
 )
 
