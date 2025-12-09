@@ -56,6 +56,18 @@ python run.py
 
 4. Once run.py has successfully deployed, navigate to http://127.0.0.1:4000/api/v1. <strong>Note:</strong> http://127.0.0.1:4000 is the landing page only.
 
-5. Here you will find a geoapi with a POST method with the following path: /geoapi/polygon/intersect/. Click the Try it out button and copy and paste a GeoJSON example from either the trueexample or falseexample files. 
+5. The API exposes the following endpoints for ski data (populated by the configured providers):
+   - GET /ski/resorts
+   - GET /ski/resorts/<id>
+   - GET /ski/conditions
+   - GET /ski/conditions/<resort_id>
 
-6. Result will appear in the response body. You may also paste your own GeoJSON examples in the payload.
+6. To run the prototype poller (mock provider) manually for local development, open a Python shell and run:
+
+```py
+from app import create_app
+from app.tasks import poll_providers
+app = create_app()
+with app.app_context():
+    poll_providers()
+```
