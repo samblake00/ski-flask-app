@@ -27,6 +27,7 @@ class Resort(db.Model):
     opens = db.Column(db.String(16), nullable=True)
     closes = db.Column(db.String(16), nullable=True)
     total_runs = db.Column(db.Integer, nullable=True)
+    website = db.Column(db.String(256), nullable=True)
     provider_id = db.Column(db.Integer, db.ForeignKey('providers.id'), nullable=True)
     source_updated_at = db.Column(db.DateTime, nullable=True)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)

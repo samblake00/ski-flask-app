@@ -20,6 +20,7 @@ def _upsert_resort(session, provider_obj, r):
             opens=r.get('opens'),
             closes=r.get('closes'),
             total_runs=r.get('total_runs'),
+            website=r.get('website'),
             provider=provider_obj,
             source_updated_at=datetime.utcnow(),
         )

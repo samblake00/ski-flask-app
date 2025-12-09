@@ -61,3 +61,8 @@ instance/
 # Ignore node_modules and other build folders if present
 node_modules/
 
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

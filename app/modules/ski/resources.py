@@ -21,6 +21,7 @@ resort_model = ski_ns.model('Resort', {
     'closes': fields.String(description='Closing time'),
     'runs_open': fields.Integer(description='Number of runs open'),
     'total_runs': fields.Integer(description='Total runs'),
+    'website': fields.String(description='Resort website URL'),
 })
 
 condition_model = ski_ns.model('Condition', {
@@ -50,6 +51,7 @@ class ResortsResource(Resource):
                 'closes': r.closes,
                 'runs_open': None,
                 'total_runs': r.total_runs,
+                'website': r.website,
             })
         return results
 
@@ -70,6 +72,7 @@ class ResortResource(Resource):
             'closes': r.closes,
             'runs_open': None,
             'total_runs': r.total_runs,
+            'website': r.website,
         }
 
 
